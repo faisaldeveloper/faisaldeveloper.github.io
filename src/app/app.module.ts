@@ -19,6 +19,10 @@ import { AboutComponent } from './about/about.component';
 
     RouterModule.forRoot([
       {
+        path: '',
+        component: HomeComponent
+     },
+     {
          path: 'abt-cmp',
          component: AboutComponent
       }
