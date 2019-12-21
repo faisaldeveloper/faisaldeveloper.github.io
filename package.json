@@ -9,7 +9,8 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "generate": "node ./server/generate.js > ./server/database.json",
-    "server": "json-server --watch ./server/database.json"
+    "server": "json-server --watch ./server/database.json",
+    "deploy:gh": "ng build --prod --base-href='https://faisaldeveloper.github.io/fs-shop/' && ngh --dir=dist/fs-shop"
   },
   "private": true,
   "dependencies": {
@@ -19,6 +20,7 @@
     "@angular/common": "^6.0.3",
     "@angular/compiler": "^6.0.3",
     "@angular/core": "^6.0.3",
+    "@angular/fire": "5.2.3",
     "@angular/forms": "^6.0.3",
     "@angular/http": "^6.0.3",
     "@angular/material": "^7.3.3",
