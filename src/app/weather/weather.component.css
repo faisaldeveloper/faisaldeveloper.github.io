@@ -1,0 +1,19 @@
+
+.sec-main{
+  margin: 10px;
+  background-color: aquamarine;
+}
+
+.sec-left{
+  width: 50%;
+  background-color: crimson;
+  float: left;
+}
+
+.sec-right{
+width: 50%;
+background-color: blueviolet;
+float: right;
+}
+
+

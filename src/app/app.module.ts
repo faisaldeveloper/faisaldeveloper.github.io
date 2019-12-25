@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-//import { AppRoutingModule } from '@angular/platform-browser';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { NgModule } from '@angular/core';
 import { RouterModule} from '@angular/router';
@@ -9,30 +9,39 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
+import { WeatherComponent } from './weather/weather.component';
+import { ApixuService } from './apixu.service';
+
 
 import { MatToolbarModule,
   MatIconModule,
+  MatInputModule,
   MatCardModule,
   MatButtonModule,
+  MatFormFieldModule,
   MatProgressSpinnerModule } from '@angular/material';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    AboutComponent
+    AboutComponent,
+    WeatherComponent
   ],
   imports: [
     BrowserModule,
-    //AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
     MatToolbarModule,
+    MatInputModule,
     MatIconModule,
     MatButtonModule,
     MatCardModule,
+    MatFormFieldModule,
     MatProgressSpinnerModule,
+    ReactiveFormsModule,
 
     RouterModule.forRoot([
       {
@@ -42,10 +51,14 @@ import { MatToolbarModule,
      {
          path: 'abt-cmp',
          component: AboutComponent
+      },
+     {
+         path: 'weather-cmp',
+         component: WeatherComponent
       }
    ])
   ],
-  providers: [],
+  providers: [ApixuService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
