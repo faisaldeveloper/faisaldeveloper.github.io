@@ -10,7 +10,7 @@ import { ApixuService } from '../apixu.service';
 export class WeatherComponent implements OnInit {
 
   public weatherData: any;
-  public image2: any;
+  public wicon: string;
   public weatherSearchForm: FormGroup;
   constructor(private formBuilder: FormBuilder, private apixuService: ApixuService) { }
 
@@ -25,8 +25,8 @@ export class WeatherComponent implements OnInit {
       .getWeather(formValues.location)
       .subscribe(data => {
         this.weatherData = data;
-        this.image2 = this.weatherData.current.weather_icons;
-        console.log(this.weatherData);
+        this.wicon = 'https://openweathermap.org/img/w/' + this.weatherData.weather[0].icon + '.png';
+        //console.log(this.weatherData);
         });
   }
 

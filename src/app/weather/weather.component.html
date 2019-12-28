@@ -25,14 +25,14 @@
     <mat-card-title>Weather Details:</mat-card-title>
  </mat-card-header>
  <mat-card-content>
-  <p><img src="{{this.image2}}" alt="" name="icon" /></p>
-  <p class="text-center">Current weather conditions: {{this.weatherData?.current.weather_descriptions}} ({{this.weatherData?.current.temperature}})</p>
-  <p class="text-center">Feels like (in Degrees Celsius): {{ this.weatherData?.current.feelslike }}</p>
-  <p class="text-center">Is Day: {{this.weatherData?.current.is_day}}</p>
-  <p class="text-center">
-    Location Searched: {{ this.weatherData?.location.name }}, {{
-    this.weatherData?.location.country }}.
-  </p>
+   <p>{{ this.server_msg }}</p>
+  <p><img id="wicon" src="{{ this.wicon }}" alt="Weather icon"> </p>
+  <p class="text-center">Current weather: {{this.weatherData?.weather[0].main}} (Temprature: {{this.weatherData?.main.temp}}, Feels Like {{this.weatherData?.main.feels_like}})</p>
+  <p class="text-center">Weather detail: {{this.weatherData?.weather[0].description}}</p>
+  <p class="text-center">Pressure: {{ this.weatherData?.main.pressure }}</p>
+  <p class="text-center">Humidity: {{ this.weatherData?.main.humidity }}</p>
+  <p class="text-center">Visibility: {{ this.weatherData?.visibility }}</p>
+  <p class="text-center">Location Searched: {{ this.weatherData?.name }}</p>
 </mat-card-content>
 </mat-card>
 

@@ -8,8 +8,13 @@ import { retry, catchError } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class ApiService {
-  private SERVER_URL = "http://localhost:3000/products";
+  private SERVER_URL = 'https://my-json-server.typicode.com/faisaldeveloper/fakedata/products';
+
   constructor(private httpClient: HttpClient) { }
+
+  public get() {
+		return this.httpClient.get(this.SERVER_URL).pipe(catchError(this.handleError));
+  }
 
   handleError(error: HttpErrorResponse) {
     let errorMessage = 'Unknown error!';
@@ -24,11 +29,4 @@ export class ApiService {
     return throwError(errorMessage);
   }
 
-  public sendGetRequest(){
-    return this.httpClient.get(this.SERVER_URL).pipe(catchError(this.handleError));
-  }
-
-  public get(){  
-		return this.httpClient.get(this.SERVER_URL);  
-	}  
 }
