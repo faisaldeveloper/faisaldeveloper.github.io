@@ -4,6 +4,36 @@
   background-color: aquamarine;
 }
 
+.search-card{
+  max-width: 400px;
+  margin-top: 10px;
+  background-color: rgb(213, 224, 224);
+}
+
+.detail-card{
+  max-width: 400px;
+  background-color: rgb(235, 227, 219);
+  border: 2px solid;
+  border-color: crimson;
+}
+
+#fs-frm-1{
+  margin-left: 18px;
+}
+
+.w-image{
+  float: right;
+  margin-right: 7px;
+}
+
+.my-btn{
+  margin-right: 7px;
+}
+
+.w-detail{
+  margin-left: 0px;
+}
+
 .sec-left{
   width: 50%;
   background-color: crimson;

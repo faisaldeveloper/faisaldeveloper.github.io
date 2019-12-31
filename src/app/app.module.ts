@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule } from '@angular/forms';
+import { MaterialModule } from './material';
 
 import { NgModule } from '@angular/core';
 import { RouterModule} from '@angular/router';
@@ -11,16 +12,6 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { WeatherComponent } from './weather/weather.component';
 import { ApixuService } from './apixu.service';
-
-
-import { MatToolbarModule,
-  MatIconModule,
-  MatInputModule,
-  MatCardModule,
-  MatButtonModule,
-  MatFormFieldModule,
-  MatProgressSpinnerModule } from '@angular/material';
-
 
 
 @NgModule({
@@ -34,14 +25,8 @@ import { MatToolbarModule,
     BrowserModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MatToolbarModule,
-    MatInputModule,
-    MatIconModule,
-    MatButtonModule,
-    MatCardModule,
-    MatFormFieldModule,
-    MatProgressSpinnerModule,
     ReactiveFormsModule,
+    MaterialModule,
 
     RouterModule.forRoot([
       {
