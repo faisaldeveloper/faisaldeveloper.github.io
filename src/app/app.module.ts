@@ -13,6 +13,8 @@ import { AboutComponent } from './about/about.component';
 import { WeatherComponent } from './weather/weather.component';
 import { ApixuService } from './apixu.service';
 
+import {NgxPaginationModule} from 'ngx-pagination';
+
 
 @NgModule({
   declarations: [
@@ -23,6 +25,7 @@ import { ApixuService } from './apixu.service';
   ],
   imports: [
     BrowserModule,
+    NgxPaginationModule,
     HttpClientModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
